@@ -1,0 +1,311 @@
+body {
+	margin: 0;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/**************************************
+ * Header
+ */
+.header-wrapper {
+	padding-top: 40px;
+}
+#header {
+	width: 75%;
+	background: #333;
+	float: right;
+	padding-left: 30px;
+	border-radius: 20px 0px 0px 20px;
+}
+.header > label, .header > input {
+	display: none;
+}
+.header-navi {
+	padding: 0;
+	list-style: none;
+	min-width: 800px;
+}
+.header-navi > li {
+	display: inline-block;
+}
+.header-navi > li > a {
+	display: inline-block;
+	padding: 13px 10px;
+	font: bold 20px/1.2 "Ubuntu";
+	text-decoration: none;
+	color: #aaa;
+}
+/**************************************
+ * Visual
+ */
+#visual {
+	height: 600px;
+	background-image: url("/hansol/image/Main1.jpg");
+	background-size: cover;
+	background-position: bottom;
+	margin-bottom: 110px;
+}
+
+/**************************************
+ * body-contents
+ */
+
+/*contents1*/
+#body-contents1 {
+	width: 940px;
+	height: 630px;
+	margin: 0px auto;
+	margin-bottom: 50px;
+	position: relative;
+}
+.body-contents11 {
+	width:600px;
+	height: 500px;
+	background: #eee;
+	background-size: cover;
+	border: 1px solid #ddd;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.body-contents12 {
+	width:600px;
+	height: 500px;
+	background: #ccc;
+	border: 1px solid #ddd;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+/*contents2*/
+#body-contents2 {
+	margin-bottom: 75px;
+	overflow: hidden;
+	position: relative;
+}
+#body-contents2 > h2 {
+	text-align: center;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+}
+.body-contents21 {
+	width: 49%;
+	height: 405px;
+	background: #eee;
+	float: left;
+	margin-right: 1%
+}
+.body-contents22 {
+	width: 49%;
+	height: 405px;
+	background: #eee;
+	float: left;
+	margin-left: 1%;
+}
+/*contents3*/
+#body-contents3 {
+	width: 940px;
+	margin: 0 auto;
+	margin-bottom: 170px;
+}
+.body-contents31 {
+	margin-bottom: 110px;
+	overflow: hidden;
+}
+.body-contents31 > div {
+	width: 50%;
+	height: 470px;
+	float: left;
+}
+.body-contents311 {
+	background: #ccc;
+}
+.body-contents312 {
+	background: #aaa;
+}
+.body-contents313 {
+	background: #777;
+}
+.body-contents314 {
+	overflow: hidden;
+}
+.body-contents314 > div {
+	width: 50%;
+	height: 235px;
+	float: left;
+}
+.body-contents3141 {
+	background: #333;
+}
+.body-contents3142 {
+	background: #444;
+}
+.body-contents3143 {
+	background: #555;
+}
+.body-contents3144 {
+	background: #666;
+}
+.body-contents32 > h2  {
+	margin-bottom: 50px;
+}
+.body-contents321 {
+	overflow: hidden;
+}
+.body-contents321 > div {
+	width: 300px;
+	height: 270px;
+	margin-right: 20px;
+	background: #666; 
+	float: left;
+}
+.body-contents321 > div:last-child {
+	margin-right: 0px;
+}
+/*contents4*/
+#body-contents4 {
+	background: #ccc;
+	margin-bottom: 140px;
+}
+.body-contents41 {
+	width: 940px;
+	background: #444;
+	height: 350px;
+	margin: 0 auto;
+	position: relative;
+}
+.body-contents41 > p {
+	width: 550px;
+	position: absolute;
+	top: 100px;
+	left: 0;
+}
+.body-contents411 {
+	position: absolute;
+	width: 240px;
+	height: 280px;
+	background: #666;
+	top: -50px;
+	right: 0;
+}
+.body-contents411:after {
+	content: " ";
+	width: 230px;
+	height: 270px;
+	border: 2px solid #eee;
+	position: absolute;
+	top: 30px;
+	right: 55px;
+}
+.body-contents412 {
+	position: absolute;
+	width: 300px;
+	height: 60px;
+	background: #666;
+	bottom: 0px;
+	right: 0;
+	margin-bottom: 15px;
+}
+/*contents5*/
+#body-contents5 {
+	margin-bottom: 60px;
+}
+#body-contents5 > h2 {
+	margin-bottom: 60px;
+	font-size: 40px;
+	text-align: right;
+}
+.body-contents51 {
+	width: 940px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.body-contents51 > div {
+	width: 300px;
+	height: 360px;
+	float: left;
+	margin-right: 20px;
+	background: #aaa;
+}
+.body-contents51 > div:last-child {
+	margin-right: 0px;
+}
+
+
+/*************************************************************
+ * 슬라이더 적용 CSS
+ * ----------------
+ * 필요한 속성을 커스터마이징 하거나 새로운 선택자를 추가해서 수정
+ */
+.slider {
+    width: 100%; /*수정하지 말것*/
+    height: 500px;
+    overflow: hidden; /*수정하지 말것*/
+    position: relative; /*수정하지 말것*/
+}
+
+/*
+ * 슬라이드 효과로 처리 동적 연결
+ * slide 전환으로 처리되는 카드내 하위 요소에게 CSS 처리시
+ * .slider-item-slide를 prifix로 해서 하위 선택자로 지정
+ */
+.slider-item-slide h1 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #FFF;
+    z-index: 99999;
+    text-decoration: none;
+}
+/*
+* 슬라이드 효과로 처리 동적 연결
+* fade 전환으로 처리되는 카드내 하위 요소에게 CSS 처리시
+* .slider-item-fade를 prifix로 해서 하위 선택자로 지정
+*/
+.slider-item-fade h1 {
+    padding-left: 50px;
+    color: #FFF;
+}
+.slider-item-slide > a,
+.slider-item-fade > a {
+    text-decoration: none;
+}
+
+/*
+ * Prev, Next 버튼에 대한 처리
+ */
+.slider:hover > .slider-navi {
+    display: block; /*수정하지 말것*/
+    cursor: pointer; /*수정하지 말것*/
+    font-weight: bold;
+}
+.slider:hover > .slider-navi:hover {
+    color: red;
+}
+.slider > .slider-navi {
+    position: absolute; /*수정하지 말것*/
+    z-index: 10; /*수정하지 말것*/
+    display: none; /*수정하지 말것*/
+    /* Bug fixed: 위치를 잡지 못하는 문제 때문에 top: 0을 줌*/
+    top: 0; /*수정하지 말것*/
+	line-height: 500px;
+}
+.slider > .slider-prev {
+    left: 10px;
+    
+}
+.slider > .slider-next {
+    right: 10px;
+}
+
+/**************************************
+ * Footer
+ */
+#footer {
+	background: #ccc;
+}
+

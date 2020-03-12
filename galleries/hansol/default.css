@@ -1,0 +1,48 @@
+/*------------------------
+ * Web Fonts 정의 
+ */
+/*NanumGothicExtraBold*/
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Do+Hyeon|Sunflower:300');
+@font-face {
+	font-family: NanumGothicExtraBold;
+	src: url("/_webfonts/NanumGothicExtraBold.woff") format("woff");
+
+/*-------------------------
+ * 초기화 CSS 
+ */
+* {
+	box-sizing: border-box;
+	/*transition: all 0.5s;*/
+}
+
+
+/*-------------------------
+html {
+	
+}
+*/
+body {
+	margin: 0;
+}
+a:link, a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+
+/*-------------------------
+div, p, spa, a, li, dt, dd, th, td {
+	font-size: --;
+	font-style: --;
+} 
+*/
+
+
+
+
+/*-------------------------
+ * 기타 초기화 
+ */
+
+

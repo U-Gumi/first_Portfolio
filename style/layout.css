@@ -1,0 +1,84 @@
+/* Web Fonts 정의 */
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
+/*  초기화 CSS */
+* {box-sizing: border-box;}
+body {margin: 0;}
+a:link, a:visited {text-decoration: none;color: #000;}
+
+
+@media screen and (max-width: 800px) {
+	/*-Header*/
+	.header-wrapper {width: 100%;}
+	.header {width: 100%;position: fixed;z-index: 10000000;top: 0;text-align: right;background: rgba(255, 255, 255, 0.7);}
+	.header-logo {width: 60px;height: 60px;float: left;	margin: 10px 0px 0px 10px;}
+	.header-logo img {width: 60px;height: 60px;}
+	.header > input {display: none;}
+	.header > label {display: inline-block;position: relative;width: 30px;height: 30px;margin: 22px;z-index: 99999;}
+	.header > label > *,
+	.header > label::before,
+	.header > label::after,
+	.header-navi {transition: 400ms;}
+	.header > label::before {content: "";position: absolute;top: 8px;left: 0;width: 17px;height: 3px;background: #000;transform-origin: 0 50%;}
+	.header > label > span {display: inline-block;position: absolute;left: 0;top: 14px;width: 17px;height: 3px;background: #000;}
+	.header > label::after {content: "";position: absolute;bottom: 7px;left: 0;width: 17px;height: 3px;background: #000;transform-origin: 0 50%;}
+	.header-navi {position: fixed;top: 0;right: 0;margin: 0;padding: 0;background: rgba(255, 255, 255, 0.95);text-align: center;width: 0;overflow: hidden;}
+	.header-navi-logo {	margin: 5px auto 10px;}
+	.header-navi-logo img {width: 80px;height: 80px;}
+	.header-navi > li {/*display:block;*/padding: 10px 0;white-space: nowrap;}
+	.header-navi > li > a {font: 25px/1.3 "Ubuntu";}
+	.header-navi-first {height: 110px;background: #2e99b0;margin-bottom: 20px;}
+	#header-navi-toggle:checked + label {opacity: 0.3;}
+	#header-navi-toggle:checked + label > span {width: 0;}
+	#header-navi-toggle:checked + label::before {transform: rotate(45deg);}
+	#header-navi-toggle:checked + label::after {transform: rotate(-45deg);}
+	#header-navi-toggle:checked + label + .header-navi {width: 100%;height: 100%;border: 1px solid tan;z-index: 9999;}
+	.icon {position: fixed;right: 20px;bottom: 20px;z-index: 99;}
+	.icon > .fas {font-size: 40px;animation: myani-icon 2s infinite linear;}
+
+	@keyframes myani-icon {	
+		0% { opacity: 1; }
+		50% { opacity: 0.5}
+		100% { opacity: 1; } 
+	}
+
+	/*Footer*/
+	.footer-wrapper {width: 100%;}
+	.footer {width: 100%;margin: 0 auto;margin-top: 20px;text-align: center;border-top: 1px solid #000;background: #eee;opacity: 0.8;padding: 20px;}
+	.footer > p, .footer > a {font: 15px/1.8 "Ubuntu";margin: 0;}
+	.footer > .counter {margin: 0;color: #999;list-style: none;padding:0;}
+	.footer > .counter > li {display: inline-block;}
+}
+
+@media screen and (min-width: 801px) {
+	/* Header */
+	.header-wrapper {padding-top: 20px;}
+	.header {overflow: hidden;}
+	.header-logo {width: 130px;height: 130px;float: left;margin: 30px 0px 30px 10%;}
+	.header-logo img {width: 130px;height: 130px;}
+	.header > label, .header > input {display: none;}
+	.header-navi {margin: 100px 13%; padding: 0;list-style: none;	float: right;}
+	.header-navi-first img{display: none;}
+	.header-navi > li {display: inline-block;position: relative; /*li .on*/}
+	.header-navi > li > a {display: inline-block;padding: 4px 15px;font: bold 23px/1.2 "Ubuntu";}
+	.header-navi > li.on::before {content: "";position: absolute;top: -5px;left: calc(50% - 25px);width: 50px;height: 50px;background: #08d9d6;z-index: -1;border-radius: 50%;}
+	.icon {position: fixed;right: 50px;bottom: 50px;z-index: 99;}
+	.icon > .fas {font-size: 60px;animation: myani-icon 2s infinite linear;}
+	@keyframes myani-icon {	
+		0% { opacity: 1; }
+		50% { opacity: 0.5}
+		100% { opacity: 1; } 
+	}
+
+	/* Body */
+	/*메인 페이지의 넓은폭 처리에 사용되는 CSS*/
+	.body-wrapper {width: 100%;padding-top: 30px;}
+	.body {width: 100%;/*min-height: 800px; */}
+
+	/* Footer */
+	.footer {width: 100%;margin: 0 auto;border-top: 1px solid #000;background: #eee;opacity: 0.8;text-align: center;padding: 20px;margin-top: 50px;position: relative;}
+	.footer > p, .footer > a {font: 16px/1.8 "Ubuntu";margin: 0;}
+	.footer > .counter {position: absolute;top: calc(50% - 32px);left: 0;margin: 0;color: #999;text-align: left;}
+
+}
